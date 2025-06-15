@@ -2,7 +2,6 @@
 Module to use an llm model to summarize the news
 """
 import json
-import asyncio
 import subprocess
 
 import ollama
@@ -10,7 +9,6 @@ import ollama
 import feed
 
 INITIALIZE_PATH = "/home/emilianoab/Documents/Projects/mx-newsletter-ai/initialize.json"
-QUERY_PATH = "/home/emilianoab/Documents/Projects/mx-newsletter-ai/query.json"
 
 def is_model_running(model):
 	list_of_models = subprocess.Popen(["ollama", "ps"], stdout=subprocess.PIPE)
